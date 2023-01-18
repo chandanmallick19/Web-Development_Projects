@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=href=“https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css”>
+    <script src=“https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js”></script>
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js”></script>
+    <script src=“https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js”>
+    </script>
+    <title>Animation Effect</title>
+    <style>
+        *{
+        margin: 0px;
+        padding: 0px;
+        }
+
+        .welcome{
+        //background-image: linear-gradient(#ff5722, #ffc107);
+        background-image: radial-gradient(circle, red, yellow, green);
+        //background: linear-gradient(45deg, red, blue);
+        //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        font: 'San Francisco', Helvetica, Arial, san-serif;
+        }
+
+        .center {
+        position: absolute;
+        top: 46%;
+        right: 6%;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        }
+
+        h1{
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 70px;
+        z-index: 1;
+        }
+
+        ul li{
+        position: absolute;
+        border: 1px solid #fff;
+        width: 30px;
+        height: 30px;
+        list-style: none;
+        opacity: 0;
+        background: #fff;
+        }
+
+        .square li{
+        top: 50vh;
+        left: 45vw;
+        animation: square 5s ease infinite;
+        }
+
+        .square li:nth-child(2){
+        top: 80vh;
+        left: 10vw;
+        animation-delay: 2s;
+        }
+
+        .square li:nth-child(3){
+        top: 80vh;
+        left: 85vw;
+        animation-delay: 4s;
+        }
+
+        .square li:nth-child(4){
+        top: 10vh;
+        left: 70vw;
+        animation-delay: 6s;
+        }
+
+        .square li:nth-child(5){
+        top: 10vh;
+        left: 10vw;
+        animation-delay: 8s;
+        }
+
+        @keyframes square{
+        0%
+        {
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+        }
+        100%
+        {
+        transform: scale(5) rotateY(1000deg);
+        opacity: 0;
+        }
+        }
+
+
+        .circle li{
+        bottom: 0;
+        left: 15vw;
+        animation: circle 10s linear infinite;
+        }
+
+        .circle li:nth-child(2){
+        left: 35vw;
+        animation-delay: 6s;
+        }
+
+        .circle li:nth-child(3){
+        left: 55vw;
+        animation-delay: 4s;
+        }
+
+        .circle li:nth-child(4){
+        left: 75vw;
+        animation-delay: 8s;
+        }
+
+        .circle li:nth-child(5){
+        left: 90vw;
+        animation-delay: 2s;
+        }
+
+        @keyframes circle{
+        0%
+        {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+        bottom: 0;
+        border-radius: 0;
+        }
+        100%
+        {
+        transform: scale(5) rotate(1000deg);
+        opacity: 0;
+        bottom: 90vh;
+        border-radius: 50%;
+        }
+        }
+    </style>
+</head>
+<body>
+<div class="welcome">
+    <h1>Apple</h1>
+</div>
+<div class="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Apple-logo.png/640px-Apple-logo.png" width="100px" height="100px">
+</div>
+<div class="square">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="circle">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
