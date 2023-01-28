@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallex Scrolling</title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #098ef3;
+    height: 1785px;
+}
+section{
+    position: relative;
+    width: 100vw;
+    height: 313vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10000;
+}
+section:before{
+    content:'';
+    position: absolute;
+    bottom:0;
+    z-index: 10000;
+}
+section img{
+    position: absolute;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+#im{
+    z-index: 2;
+}
+#text{
+    margin: -90px;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <img src="at.png" id="at" alt="">
+        <img src="im3.png" id="im" alt="">
+        <img src="sm3.png" id="sm" alt="">
+        <img src="txt.png" id="text" alt="">
+        <img src="hulk.png" id="hulk" alt="">
+        <img src="ca.png" id="ca" alt="">
+        <img src="sm2.png" id="sm2" alt="">
+
+    </section>
+    <script>
+        let ca = document.getElementById("ca");
+        let im = document.getElementById("im");
+        let sm = document.getElementById("sm");
+        let sm2 = document.getElementById("sm2");
+        let hulk = document.getElementById("hulk");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+            ca.style.left = value * 0.15 + 'px';
+            im.style.top = value * 0.8 + 'px';
+            sm.style.left = value * 1 + 'px';
+            sm2.style.left = value * 0.1 + 'px';
+            hulk.style.left = -value * 0.08 + 'px';
+            text.style.left = value * 0.20 + 'px';
+
+        })
+
+    </script>
+</body>
+</html>
