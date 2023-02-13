@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Tom and Jerry</title>
+
+    <script type="text/javascript">
+        function newGame(){
+            document.getElementById('tomRun').start();
+            document.getElementById('tom').src='tom.gif';
+            document.getElementById('tomRun').direction='left';
+        }
+
+        function stopTom(){
+            document.getElementById('tomRun').stop();
+        }
+
+        function alertJerry(){
+            document.getElementById('jerry').src='jerryright.png';
+            document.getElementById('jerry').style.width='5%';
+            document.getElementById('jerry').style.height='auto';
+        }
+
+        function boostJerry(){
+            document.getElementById('jerry').src='jerrybig.png';
+            document.getElementById('jerry').style.width='auto';
+        }
+
+    </script>
+</head>
+<body onload="stopTom()" background="back.jpg" style="background-size: cover;">
+
+    <!--Sun-->
+    <img src="sun.gif" width="8%" style="position:relative; margin-left:1500px;">
+
+    <!--Buttons-->
+    <div class="btn-group-vertical" style="position:fixed; margin-top: 400px">
+    <button type="button" onclick="newGame()" class="btn btn-primary" style="font-size: 100px">New Game</button>
+    <button type="button" class="btn btn-success" style="font-size: 100px">Alert Jerry</button>
+    <button type="button" class="btn btn-warning" style="font-size: 100px">Boost Jerry</button>
+    <button type="button" class="btn btn-danger" style="font-size: 100px">Scare Tom</button>
+    </div>
+
+    <div style="margin-top: 1000px;">
+    <marquee direction="left" scrollamount="80"><img src="tom.gif" width="15%"/></marquee>
+    <img src="jerryleft.png" style="margin-left: 900px;" width="5%"/>
+    
+    </div>
+</body>
+</html>
