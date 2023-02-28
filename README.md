@@ -1,4 +1,4 @@
-# Web-Development_Projects
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1><center> 🔥Web Development Projects</h1>
+  <h1><center> 🔥Web-Development Projects</h1>
     <hr>
     <h4>About: </h4>
     <p>This repositort consist of some basic Web-Development projects made with HTML, CSS & Javascript.
